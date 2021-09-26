@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  state1:
+    cmd: python file1.py
+    deps:
+    - path: file1.py
+      md5: 199cc3a8715811cec2f1f6fd95c2ea4d
+      size: 73
+    outs:
+    - path: artifact1.txt
+      md5: 91f42871e10b5f15ec84786a373b402e
+      size: 8
+  state2:
+    cmd: python file2.py
+    deps:
+    - path: file2.py
+      md5: 46dc3d6ea24e6bb3bd98ca5189a4ee9c
+      size: 119
+  state3:
+    cmd: python file3.py
+    deps:
+    - path: file1.py
+      md5: 199cc3a8715811cec2f1f6fd95c2ea4d
+      size: 73
+    outs:
+    - path: artifact3.txt
+      md5: d10e395f1c64873fbf285951110e5ce7
+      size: 6

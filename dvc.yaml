@@ -1,0 +1,20 @@
+stages:
+  state1:
+    cmd: python file1.py
+    deps: 
+      - file1.py
+    outs: 
+      - artifact1.txt
+  
+  state2:
+    cmd: python file2.py
+    deps: 
+      - file2.py
+
+  state3:
+    cmd: python file3.py
+    deps:
+      - file1.py
+    outs:
+      - artifact3.txt
+    
